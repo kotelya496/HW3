@@ -19,6 +19,10 @@ public class DaoUserImpl implements DAO{
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }
 
+    public DaoUserImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
     @Override
     public User saveUser(User user){
         Transaction transaction = null;

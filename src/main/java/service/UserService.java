@@ -19,6 +19,10 @@ public class UserService {
         this.dao = new DaoUserImpl();
     }
 
+    public UserService(DAO dao) {
+        this.dao = dao;
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     public User saveUser(String name, String email, int age) {
